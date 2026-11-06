@@ -1,0 +1,9 @@
+<rule id="100100" level="10" frequency="3" timeframe="60">
+    <if_matched_sid>5716</if_matched_sid>
+    <description>
+        SSH Brute Force Detected - 3 failed logins attempt
+    </description>
+    <mitre>
+        <id>T1110</id>
+    </mitre>
+</rule>
