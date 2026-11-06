@@ -63,6 +63,26 @@ The project automatically sends Telegram notifications when the SSH brute-force 
 - AbuseIPDB Enrichment
 - Sysmon Endpoint Monitoring
 
+## Screenshots
+
+### Rule Detection
+
+![Rule Detection](screenshots/rule-100100.png)
+
+Custom Wazuh rule (ID: 100100) triggered after 3 failed SSH login attempts within 60 seconds.
+
+### Event Details
+
+![Event Details](screenshots/event-details.png)
+
+Detailed event information showing source IP, target user, MITRE mapping, rule level, and correlation frequency.
+
+### Telegram Alert
+
+![Telegram Alert](screenshots/telegram-alert.png)
+
+Telegram notification automatically generated when the custom SSH brute-force detection rule is triggered.
+
 ## Author
 
 Bagas Alif Utama
