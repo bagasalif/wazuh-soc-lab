@@ -1,4 +1,4 @@
-# Wazuh SOC Lab
+<img width="3609" height="2268" alt="image" src="https://github.com/user-attachments/assets/19fa71dc-4cef-47e9-a24e-aae6519f7e3f" /># Wazuh SOC Lab
 
 ## Overview
 
@@ -17,6 +17,7 @@ Personal SOC Lab project using Wazuh for detection engineering, threat hunting, 
 - Custom SSH Brute Force Detection Rule
 - MITRE ATT&CK Mapping (T1110)
 - Telegram Alert Integration
+- Active Response Automation
 - Linux VPS Monitoring
 
 ## Detection Workflow
@@ -30,7 +31,9 @@ Rule 100100
         ↓
 Telegram Integration
         ↓
-Telegram Notification
+Active Response Script
+        ↓
+active_response.log
 ```
 
 ## Custom Rule
@@ -57,11 +60,11 @@ The project automatically sends Telegram notifications when the SSH brute-force 
 
 ## Future Improvements
 
-- Active Response
-- Automatic IP Blocking
+- Automatic IP Blocking using Active Response
+- AbuseIPDB Threat Intelligence Enrichment
 - Cowrie Honeypot Integration
-- AbuseIPDB Enrichment
 - Sysmon Endpoint Monitoring
+- Windows Endpoint Monitoring
 
 ## Screenshots
 
@@ -82,6 +85,37 @@ Detailed event information showing source IP, target user, MITRE mapping, rule l
 ![Telegram Alert](screenshots/telegram-alert.png)
 
 Telegram notification automatically generated when the custom SSH brute-force detection rule is triggered.
+
+## Active Response
+
+When the custom SSH brute-force detection rule (ID: 100100) is triggered:
+
+1. Telegram notification is sent.
+2. Active Response script is executed.
+3. The event is written into a local response log.
+
+### Active Response Workflow
+
+```text
+SSH Failed Login
+        ↓
+Rule 5716
+        ↓
+Rule 100100
+        ↓
+Telegram Notification
+        ↓
+Active Response Script
+        ↓
+active_response.log
+```
+
+### Active Response
+
+screenshots/active-response.png
+
+Active Response successfully executed after the custom SSH brute-force detection rule was triggered.
+
 
 ## Author
 
