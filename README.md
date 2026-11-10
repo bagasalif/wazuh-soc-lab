@@ -112,7 +112,7 @@ active_response.log
 
 ### Active Response
 
-![Active Response](screenshots/active-respon.png)
+![Active Response](screenshots/active-response.png)
 
 Active Response successfully executed after the custom SSH brute-force detection rule was triggered.
 
