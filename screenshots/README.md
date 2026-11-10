@@ -7,3 +7,4 @@ This directory contains screenshots related to the Wazuh SOC Lab project.
 - Rule 100100 Trigger
 - Event Details
 - Telegram Alert Notification
+- Active Response
