@@ -1,4 +1,4 @@
-<img width="3609" height="2268" alt="image" src="https://github.com/user-attachments/assets/19fa71dc-4cef-47e9-a24e-aae6519f7e3f" /># Wazuh SOC Lab
+# Wazuh SOC Lab
 
 ## Overview
 
